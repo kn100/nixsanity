@@ -16,8 +16,8 @@
     mountdPort = 4002;
 
     exports = ''
-      /mnt/backedup  faith.lan(rw,all_squash,anonuid=9996,anongid=1000,sync,no_subtree_check)
-      /mnt/burnable  faith.lan(rw,all_squash,anonuid=9996,anongid=1000,sync,no_subtree_check)
+      /mnt/backedup  faith.lan(rw,all_squash,anonuid=9996,anongid=1000,sync,no_subtree_check) 192.168.18.0/24(rw,all_squash,anonuid=9996,anongid=1000,sync,no_subtree_check)
+      /mnt/burnable  faith.lan(rw,all_squash,anonuid=9996,anongid=1000,sync,no_subtree_check) 192.168.18.0/24(rw,all_squash,anonuid=9996,anongid=1000,sync,no_subtree_check)
     '';
   };
 
