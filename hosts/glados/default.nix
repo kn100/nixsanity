@@ -48,31 +48,5 @@
     '';
   };
 
-  # Additional Users/Groups for NFS
-  users.groups.cowaccess.gid = 1000;
-  users.groups.kn100.gid = 1001;
-
-  users.users.kn100.extraGroups = [ "cowaccess" ];
-
-  users.users.cowrw = {
-    isNormalUser = true;
-    uid = 9996;
-    group = "cowaccess";
-    description = "Samba Read-Write User";
-    home = "/home/cowrw";
-    createHome = true;
-    shell = pkgs.bash;
-  };
-
-  users.users.cowro = {
-    isNormalUser = true;
-    uid = 9997;
-    group = "cowaccess";
-    description = "Samba Read-Only User";
-    home = "/home/cowro";
-    createHome = true;
-    shell = pkgs.bash;
-  };
-
   system.stateVersion = "25.11";
 }
