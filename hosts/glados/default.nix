@@ -8,8 +8,6 @@
     ./hardware.nix
   ];
 
-  networking.hostName = "glados";
-
   # NFS Server Configuration
   services.nfs.server = {
     enable = true;

@@ -15,6 +15,7 @@
     htop
     curl
     git
+    tree
   ];
 
   programs.git = {
