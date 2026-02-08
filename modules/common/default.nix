@@ -27,13 +27,6 @@
   # Deployment & Admin Setup
   security.sudo.wheelNeedsPassword = false;
 
-  # Ensure mount points exist
-  systemd.tmpfiles.rules = [
-    "d /mnt 0755 root root -"
-    "d /mnt/backedup 0755 root root -"
-    "d /mnt/burnable 0755 root root -"
-  ];
-
   programs.git = {
     enable = true;
     config = {

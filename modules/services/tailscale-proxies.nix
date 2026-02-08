@@ -27,7 +27,12 @@ in
             };
             backendPort = mkOption {
               type = types.port;
-              description = "The local port to proxy to.";
+              description = "The local port to proxy to on port 443 of the Tailnet.";
+            };
+            extraPorts = mkOption {
+              type = types.attrsOf types.port;
+              default = { };
+              description = "Extra port mappings. Key is Tailnet port, value is local backend port.";
             };
             authKeyFile = mkOption {
               type = types.nullOr types.path;
@@ -93,9 +98,17 @@ in
             --authkey=$(cat ${authKeyFile}) \
             --advertise-tags=tag:vtwo
 
-          # Configure the HTTPS serve
+          # Configure the HTTPS serve (default port 443)
           ${pkgs.tailscale}/bin/tailscale --socket=/run/tailscale-proxies/${name}/tailscaled.sock serve \
             --bg http://localhost:${toString value.backendPort}
+
+          # Configure extra ports
+          ${concatStringsSep "\n" (
+            mapAttrsToList (tsPort: backendPort: ''
+              ${pkgs.tailscale}/bin/tailscale --socket=/run/tailscale-proxies/${name}/tailscaled.sock serve \
+                --bg ${tsPort} http://localhost:${toString backendPort}
+            '') value.extraPorts
+          )}
         '';
       }
     ) cfg.proxies;

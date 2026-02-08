@@ -14,6 +14,7 @@
     ../../modules/services/home-assistant.nix
     ../../modules/services/mosquitto.nix
     ../../modules/services/zigbee2mqtt.nix
+    ../../modules/services/jellyfin.nix
     ../../modules/services/tailscale-proxies.nix
     inputs.sops-nix.nixosModules.sops
   ];
@@ -22,6 +23,7 @@
     nfs-utils
     sanoid
     smartmontools
+    clinfo
   ];
 
   sops.defaultSopsFile = ../../secrets/passwords.yaml;
@@ -71,6 +73,10 @@
       zigbee2mqtt = {
         hostname = "z2m";
         backendPort = 8080;
+      };
+      jellyfin = {
+        hostname = "jellyfin";
+        backendPort = 8096;
       };
     };
   };
