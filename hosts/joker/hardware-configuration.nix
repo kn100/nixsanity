@@ -18,8 +18,6 @@
     "xhci_pci"
     "ahci"
     "nvme"
-    "usbhid"
-    "usb_storage"
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
@@ -38,6 +36,26 @@
       "fmask=0022"
       "dmask=0022"
     ];
+  };
+
+  fileSystems."/cow" = {
+    device = "cow";
+    fsType = "zfs";
+  };
+
+  fileSystems."/cow/backedup" = {
+    device = "cow/backedup";
+    fsType = "zfs";
+  };
+
+  fileSystems."/cow/burnable" = {
+    device = "cow/burnable";
+    fsType = "zfs";
+  };
+
+  fileSystems."/cow/ISO" = {
+    device = "cow/ISO";
+    fsType = "zfs";
   };
 
   swapDevices = [ ];

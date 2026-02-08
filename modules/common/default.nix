@@ -22,7 +22,6 @@
     curl
     git
     tree
-    nfs-utils # Ensure NFS tools are available for mounts
   ];
 
   # Deployment & Admin Setup

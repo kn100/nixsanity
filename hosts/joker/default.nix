@@ -18,8 +18,47 @@
     inputs.sops-nix.nixosModules.sops
   ];
 
+  environment.systemPackages = with pkgs; [
+    nfs-utils
+    sanoid
+    smartmontools
+  ];
+
   sops.defaultSopsFile = ../../secrets/passwords.yaml;
   sops.age.keyFile = "/var/lib/sops-nix/key.txt";
+
+  # bulk data storage configuration
+  boot.zfs.extraPools = [ "cow" ];
+  boot.supportedFilesystems = [ "zfs" ];
+  networking.hostId = "99887766";
+
+  services.zfs.autoScrub = {
+    enable = true;
+    interval = "Sunday, 04:00";
+  };
+
+  services.smartd = {
+    enable = true;
+    notifications.wall.enable = true;
+  };
+
+  services.sanoid = {
+    enable = true;
+    interval = "hourly";
+    datasets."cow" = {
+      useTemplate = [ "production" ];
+      recursive = true;
+    };
+    templates.production = {
+      hourly = 24;
+      daily = 30;
+      monthly = 3;
+      yearly = 0;
+
+      autoprune = true;
+      autosnap = true;
+    };
+  };
 
   # Tailscale Virtual Sidecars
   services.tailscale-proxies = {
@@ -46,10 +85,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # ZFS Support
-  boot.supportedFilesystems = [ "zfs" ];
-  networking.hostId = "99887766";
 
   system.stateVersion = "25.11";
 }
