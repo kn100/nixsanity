@@ -1,0 +1,1796 @@
+- id: '1762271672239'
+  name: 'Office icicle '
+  entities:
+    select.wled_playlist:
+      options: []
+      friendly_name: WLED Playlist
+      state: unavailable
+    select.wled_preset:
+      options:
+      - DJ Light
+      friendly_name: WLED Preset
+      state: unknown
+    light.wled_main:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: WLED Main
+      supported_features: 32
+      state: 'on'
+    light.wled_segment_1:
+      restored: true
+      effect_list:
+      - Solid
+      - Blink
+      - Breathe
+      - Wipe
+      - Wipe Random
+      - Random Colors
+      - Sweep
+      - Dynamic
+      - Colorloop
+      - Rainbow
+      - Scan
+      - Scan Dual
+      - Fade
+      - Theater
+      - Theater Rainbow
+      - Running
+      - Saw
+      - Twinkle
+      - Dissolve
+      - Dissolve Rnd
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Strobe
+      - Strobe Rainbow
+      - Strobe Mega
+      - Blink Rainbow
+      - Android
+      - Chase
+      - Chase Random
+      - Chase Rainbow
+      - Chase Flash
+      - Chase Flash Rnd
+      - Rainbow Runner
+      - Colorful
+      - Traffic Light
+      - Sweep Random
+      - Chase 2
+      - Aurora
+      - Stream
+      - Scanner
+      - Lighthouse
+      - Fireworks
+      - Rain
+      - Tetrix
+      - Fire Flicker
+      - Gradient
+      - Loading
+      - Rolling Balls
+      - Fairy
+      - Two Dots
+      - Fairytwinkle
+      - Running Dual
+      - RSVD
+      - Chase 3
+      - Tri Wipe
+      - Tri Fade
+      - Lightning
+      - ICU
+      - Multi Comet
+      - Scanner Dual
+      - Stream 2
+      - Oscillate
+      - Pride 2015
+      - Juggle
+      - Palette
+      - Fire 2012
+      - Colorwaves
+      - Bpm
+      - Fill Noise
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Colortwinkles
+      - Lake
+      - Meteor
+      - Meteor Smooth
+      - Railway
+      - Ripple
+      - Twinklefox
+      - Twinklecat
+      - Halloween Eyes
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Spots
+      - Spots Fade
+      - Glitter
+      - Candle
+      - Fireworks Starburst
+      - Fireworks 1D
+      - Bouncing Balls
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Popcorn
+      - Drip
+      - Plasma
+      - Percent
+      - Ripple Rainbow
+      - Heartbeat
+      - Pacifica
+      - Candle Multi
+      - Solid Glitter
+      - Sunrise
+      - Phased
+      - Twinkleup
+      - Noise Pal
+      - Sine
+      - Phased Noise
+      - Flow
+      - Chunchun
+      - Dancing Shadows
+      - Washing Machine
+      - Rotozoomer
+      - Blends
+      - TV Simulator
+      - Dynamic Smooth
+      - Spaceships
+      - Crazy Bees
+      - Ghost Rider
+      - Blobs
+      - Scrolling Text
+      - Drift Rose
+      - Distortion Waves
+      - Soap
+      - Octopus
+      - Waving Cell
+      - Pixels
+      - Pixelwave
+      - Juggles
+      - Matripix
+      - Gravimeter
+      - Plasmoid
+      - Puddles
+      - Midnoise
+      - Noisemeter
+      - Freqwave
+      - Freqmatrix
+      - GEQ
+      - Waterfall
+      - Freqpixels
+      - RSVD
+      - Noisefire
+      - Puddlepeak
+      - Noisemove
+      - Noise2D
+      - Perlin Move
+      - Ripple Peak
+      - Firenoise
+      - Squared Swirl
+      - RSVD
+      - DNA
+      - Matrix
+      - Metaballs
+      - Freqmap
+      - Gravcenter
+      - Gravcentric
+      - Gravfreq
+      - DJ Light
+      - Funky Plank
+      - RSVD
+      - Pulser
+      - Blurz
+      - Drift
+      - Waverly
+      - Sun Radiation
+      - Colored Bursts
+      - Julia
+      - RSVD
+      - RSVD
+      - RSVD
+      - Game Of Life
+      - Tartan
+      - Polar Lights
+      - Swirl
+      - Lissajous
+      - Frizzles
+      - Plasma Ball
+      - Flow Stripe
+      - Hiphotic
+      - Sindots
+      - DNA Spiral
+      - Black Hole
+      - Wavesins
+      - Rocktaves
+      - Akemi
+      supported_color_modes:
+      - rgbw
+      friendly_name: Segment 1
+      supported_features: 36
+      state: unavailable
+    light.wled_segment_2:
+      restored: true
+      effect_list:
+      - Solid
+      - Blink
+      - Breathe
+      - Wipe
+      - Wipe Random
+      - Random Colors
+      - Sweep
+      - Dynamic
+      - Colorloop
+      - Rainbow
+      - Scan
+      - Scan Dual
+      - Fade
+      - Theater
+      - Theater Rainbow
+      - Running
+      - Saw
+      - Twinkle
+      - Dissolve
+      - Dissolve Rnd
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Strobe
+      - Strobe Rainbow
+      - Strobe Mega
+      - Blink Rainbow
+      - Android
+      - Chase
+      - Chase Random
+      - Chase Rainbow
+      - Chase Flash
+      - Chase Flash Rnd
+      - Rainbow Runner
+      - Colorful
+      - Traffic Light
+      - Sweep Random
+      - Chase 2
+      - Aurora
+      - Stream
+      - Scanner
+      - Lighthouse
+      - Fireworks
+      - Rain
+      - Tetrix
+      - Fire Flicker
+      - Gradient
+      - Loading
+      - Rolling Balls
+      - Fairy
+      - Two Dots
+      - Fairytwinkle
+      - Running Dual
+      - RSVD
+      - Chase 3
+      - Tri Wipe
+      - Tri Fade
+      - Lightning
+      - ICU
+      - Multi Comet
+      - Scanner Dual
+      - Stream 2
+      - Oscillate
+      - Pride 2015
+      - Juggle
+      - Palette
+      - Fire 2012
+      - Colorwaves
+      - Bpm
+      - Fill Noise
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Colortwinkles
+      - Lake
+      - Meteor
+      - Meteor Smooth
+      - Railway
+      - Ripple
+      - Twinklefox
+      - Twinklecat
+      - Halloween Eyes
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Spots
+      - Spots Fade
+      - Glitter
+      - Candle
+      - Fireworks Starburst
+      - Fireworks 1D
+      - Bouncing Balls
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Popcorn
+      - Drip
+      - Plasma
+      - Percent
+      - Ripple Rainbow
+      - Heartbeat
+      - Pacifica
+      - Candle Multi
+      - Solid Glitter
+      - Sunrise
+      - Phased
+      - Twinkleup
+      - Noise Pal
+      - Sine
+      - Phased Noise
+      - Flow
+      - Chunchun
+      - Dancing Shadows
+      - Washing Machine
+      - Rotozoomer
+      - Blends
+      - TV Simulator
+      - Dynamic Smooth
+      - Spaceships
+      - Crazy Bees
+      - Ghost Rider
+      - Blobs
+      - Scrolling Text
+      - Drift Rose
+      - Distortion Waves
+      - Soap
+      - Octopus
+      - Waving Cell
+      - Pixels
+      - Pixelwave
+      - Juggles
+      - Matripix
+      - Gravimeter
+      - Plasmoid
+      - Puddles
+      - Midnoise
+      - Noisemeter
+      - Freqwave
+      - Freqmatrix
+      - GEQ
+      - Waterfall
+      - Freqpixels
+      - RSVD
+      - Noisefire
+      - Puddlepeak
+      - Noisemove
+      - Noise2D
+      - Perlin Move
+      - Ripple Peak
+      - Firenoise
+      - Squared Swirl
+      - RSVD
+      - DNA
+      - Matrix
+      - Metaballs
+      - Freqmap
+      - Gravcenter
+      - Gravcentric
+      - Gravfreq
+      - DJ Light
+      - Funky Plank
+      - RSVD
+      - Pulser
+      - Blurz
+      - Drift
+      - Waverly
+      - Sun Radiation
+      - Colored Bursts
+      - Julia
+      - RSVD
+      - RSVD
+      - RSVD
+      - Game Of Life
+      - Tartan
+      - Polar Lights
+      - Swirl
+      - Lissajous
+      - Frizzles
+      - Plasma Ball
+      - Flow Stripe
+      - Hiphotic
+      - Sindots
+      - DNA Spiral
+      - Black Hole
+      - Wavesins
+      - Rocktaves
+      - Akemi
+      supported_color_modes:
+      - rgbw
+      friendly_name: Segment 2
+      supported_features: 36
+      state: unavailable
+    light.wled_segment_3:
+      restored: true
+      effect_list:
+      - Solid
+      - Blink
+      - Breathe
+      - Wipe
+      - Wipe Random
+      - Random Colors
+      - Sweep
+      - Dynamic
+      - Colorloop
+      - Rainbow
+      - Scan
+      - Scan Dual
+      - Fade
+      - Theater
+      - Theater Rainbow
+      - Running
+      - Saw
+      - Twinkle
+      - Dissolve
+      - Dissolve Rnd
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Strobe
+      - Strobe Rainbow
+      - Strobe Mega
+      - Blink Rainbow
+      - Android
+      - Chase
+      - Chase Random
+      - Chase Rainbow
+      - Chase Flash
+      - Chase Flash Rnd
+      - Rainbow Runner
+      - Colorful
+      - Traffic Light
+      - Sweep Random
+      - Chase 2
+      - Aurora
+      - Stream
+      - Scanner
+      - Lighthouse
+      - Fireworks
+      - Rain
+      - Tetrix
+      - Fire Flicker
+      - Gradient
+      - Loading
+      - Rolling Balls
+      - Fairy
+      - Two Dots
+      - Fairytwinkle
+      - Running Dual
+      - RSVD
+      - Chase 3
+      - Tri Wipe
+      - Tri Fade
+      - Lightning
+      - ICU
+      - Multi Comet
+      - Scanner Dual
+      - Stream 2
+      - Oscillate
+      - Pride 2015
+      - Juggle
+      - Palette
+      - Fire 2012
+      - Colorwaves
+      - Bpm
+      - Fill Noise
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Colortwinkles
+      - Lake
+      - Meteor
+      - Meteor Smooth
+      - Railway
+      - Ripple
+      - Twinklefox
+      - Twinklecat
+      - Halloween Eyes
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Spots
+      - Spots Fade
+      - Glitter
+      - Candle
+      - Fireworks Starburst
+      - Fireworks 1D
+      - Bouncing Balls
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Popcorn
+      - Drip
+      - Plasma
+      - Percent
+      - Ripple Rainbow
+      - Heartbeat
+      - Pacifica
+      - Candle Multi
+      - Solid Glitter
+      - Sunrise
+      - Phased
+      - Twinkleup
+      - Noise Pal
+      - Sine
+      - Phased Noise
+      - Flow
+      - Chunchun
+      - Dancing Shadows
+      - Washing Machine
+      - Rotozoomer
+      - Blends
+      - TV Simulator
+      - Dynamic Smooth
+      - Spaceships
+      - Crazy Bees
+      - Ghost Rider
+      - Blobs
+      - Scrolling Text
+      - Drift Rose
+      - Distortion Waves
+      - Soap
+      - Octopus
+      - Waving Cell
+      - Pixels
+      - Pixelwave
+      - Juggles
+      - Matripix
+      - Gravimeter
+      - Plasmoid
+      - Puddles
+      - Midnoise
+      - Noisemeter
+      - Freqwave
+      - Freqmatrix
+      - GEQ
+      - Waterfall
+      - Freqpixels
+      - RSVD
+      - Noisefire
+      - Puddlepeak
+      - Noisemove
+      - Noise2D
+      - Perlin Move
+      - Ripple Peak
+      - Firenoise
+      - Squared Swirl
+      - RSVD
+      - DNA
+      - Matrix
+      - Metaballs
+      - Freqmap
+      - Gravcenter
+      - Gravcentric
+      - Gravfreq
+      - DJ Light
+      - Funky Plank
+      - RSVD
+      - Pulser
+      - Blurz
+      - Drift
+      - Waverly
+      - Sun Radiation
+      - Colored Bursts
+      - Julia
+      - RSVD
+      - RSVD
+      - RSVD
+      - Game Of Life
+      - Tartan
+      - Polar Lights
+      - Swirl
+      - Lissajous
+      - Frizzles
+      - Plasma Ball
+      - Flow Stripe
+      - Hiphotic
+      - Sindots
+      - DNA Spiral
+      - Black Hole
+      - Wavesins
+      - Rocktaves
+      - Akemi
+      supported_color_modes:
+      - rgbw
+      friendly_name: Segment 3
+      supported_features: 36
+      state: unavailable
+    light.wled:
+      effect_list:
+      - Solid
+      - Blink
+      - Breathe
+      - Wipe
+      - Wipe Random
+      - Random Colors
+      - Sweep
+      - Dynamic
+      - Colorloop
+      - Rainbow
+      - Scan
+      - Scan Dual
+      - Fade
+      - Theater
+      - Theater Rainbow
+      - Running
+      - Saw
+      - Twinkle
+      - Dissolve
+      - Dissolve Rnd
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Strobe
+      - Strobe Rainbow
+      - Strobe Mega
+      - Blink Rainbow
+      - Android
+      - Chase
+      - Chase Random
+      - Chase Rainbow
+      - Chase Flash
+      - Chase Flash Rnd
+      - Rainbow Runner
+      - Colorful
+      - Traffic Light
+      - Sweep Random
+      - Chase 2
+      - Aurora
+      - Stream
+      - Scanner
+      - Lighthouse
+      - Fireworks
+      - Rain
+      - Tetrix
+      - Fire Flicker
+      - Gradient
+      - Loading
+      - Rolling Balls
+      - Fairy
+      - Two Dots
+      - Fairytwinkle
+      - Running Dual
+      - RSVD
+      - Chase 3
+      - Tri Wipe
+      - Tri Fade
+      - Lightning
+      - ICU
+      - Multi Comet
+      - Scanner Dual
+      - Stream 2
+      - Oscillate
+      - Pride 2015
+      - Juggle
+      - Palette
+      - Fire 2012
+      - Colorwaves
+      - Bpm
+      - Fill Noise
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Colortwinkles
+      - Lake
+      - Meteor
+      - Meteor Smooth
+      - Railway
+      - Ripple
+      - Twinklefox
+      - Twinklecat
+      - Halloween Eyes
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Spots
+      - Spots Fade
+      - Glitter
+      - Candle
+      - Fireworks Starburst
+      - Fireworks 1D
+      - Bouncing Balls
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Popcorn
+      - Drip
+      - Plasma
+      - Percent
+      - Ripple Rainbow
+      - Heartbeat
+      - Pacifica
+      - Candle Multi
+      - Solid Glitter
+      - Sunrise
+      - Phased
+      - Twinkleup
+      - Noise Pal
+      - Sine
+      - Phased Noise
+      - Flow
+      - Chunchun
+      - Dancing Shadows
+      - Washing Machine
+      - Rotozoomer
+      - Blends
+      - TV Simulator
+      - Dynamic Smooth
+      - Spaceships
+      - Crazy Bees
+      - Ghost Rider
+      - Blobs
+      - Scrolling Text
+      - Drift Rose
+      - Distortion Waves
+      - Soap
+      - Octopus
+      - Waving Cell
+      - Pixels
+      - Pixelwave
+      - Juggles
+      - Matripix
+      - Gravimeter
+      - Plasmoid
+      - Puddles
+      - Midnoise
+      - Noisemeter
+      - Freqwave
+      - Freqmatrix
+      - GEQ
+      - Waterfall
+      - Freqpixels
+      - RSVD
+      - Noisefire
+      - Puddlepeak
+      - Noisemove
+      - Noise2D
+      - Perlin Move
+      - Ripple Peak
+      - Firenoise
+      - Squared Swirl
+      - RSVD
+      - DNA
+      - Matrix
+      - Metaballs
+      - Freqmap
+      - Gravcenter
+      - Gravcentric
+      - Gravfreq
+      - DJ Light
+      - Funky Plank
+      - RSVD
+      - Pulser
+      - Blurz
+      - Drift
+      - Waverly
+      - Sun Radiation
+      - Colored Bursts
+      - Julia
+      - RSVD
+      - RSVD
+      - RSVD
+      - Game Of Life
+      - Tartan
+      - Polar Lights
+      - Swirl
+      - Lissajous
+      - Frizzles
+      - Plasma Ball
+      - Flow Stripe
+      - Hiphotic
+      - Sindots
+      - DNA Spiral
+      - Black Hole
+      - Wavesins
+      - Rocktaves
+      - Akemi
+      supported_color_modes:
+      - rgb
+      effect: DJ Light
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 28.673
+      - 44.314
+      rgb_color:
+      - 255
+      - 196
+      - 142
+      xy_color:
+      - 0.449
+      - 0.377
+      friendly_name: WLED
+      supported_features: 36
+      state: 'on'
+    light.office_lamp:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 71
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      friendly_name: Office Lamp
+      supported_features: 44
+      state: 'on'
+    select.office_lamp_effect:
+      options:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      assumed_state: true
+      icon: mdi:palette
+      friendly_name: Office Lamp Effect
+      state: unknown
+    light.lr_lamp:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 71
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      friendly_name: LR Lamp
+      supported_features: 44
+      state: 'on'
+  icon: mdi:ice-cream
+  metadata: {}
+- id: '1762271762365'
+  name: Office cozy
+  entities:
+    light.lr_lamp:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2202
+      color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
+      friendly_name: LR Lamp
+      supported_features: 44
+      state: 'on'
+    select.wled_playlist:
+      options: []
+      friendly_name: WLED Playlist
+      state: unavailable
+    select.wled_preset:
+      options:
+      - DJ Light
+      friendly_name: WLED Preset
+      state: unknown
+    light.wled_main:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 255
+      friendly_name: WLED Main
+      supported_features: 32
+      state: 'on'
+    light.wled_segment_1:
+      restored: true
+      effect_list:
+      - Solid
+      - Blink
+      - Breathe
+      - Wipe
+      - Wipe Random
+      - Random Colors
+      - Sweep
+      - Dynamic
+      - Colorloop
+      - Rainbow
+      - Scan
+      - Scan Dual
+      - Fade
+      - Theater
+      - Theater Rainbow
+      - Running
+      - Saw
+      - Twinkle
+      - Dissolve
+      - Dissolve Rnd
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Strobe
+      - Strobe Rainbow
+      - Strobe Mega
+      - Blink Rainbow
+      - Android
+      - Chase
+      - Chase Random
+      - Chase Rainbow
+      - Chase Flash
+      - Chase Flash Rnd
+      - Rainbow Runner
+      - Colorful
+      - Traffic Light
+      - Sweep Random
+      - Chase 2
+      - Aurora
+      - Stream
+      - Scanner
+      - Lighthouse
+      - Fireworks
+      - Rain
+      - Tetrix
+      - Fire Flicker
+      - Gradient
+      - Loading
+      - Rolling Balls
+      - Fairy
+      - Two Dots
+      - Fairytwinkle
+      - Running Dual
+      - RSVD
+      - Chase 3
+      - Tri Wipe
+      - Tri Fade
+      - Lightning
+      - ICU
+      - Multi Comet
+      - Scanner Dual
+      - Stream 2
+      - Oscillate
+      - Pride 2015
+      - Juggle
+      - Palette
+      - Fire 2012
+      - Colorwaves
+      - Bpm
+      - Fill Noise
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Colortwinkles
+      - Lake
+      - Meteor
+      - Meteor Smooth
+      - Railway
+      - Ripple
+      - Twinklefox
+      - Twinklecat
+      - Halloween Eyes
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Spots
+      - Spots Fade
+      - Glitter
+      - Candle
+      - Fireworks Starburst
+      - Fireworks 1D
+      - Bouncing Balls
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Popcorn
+      - Drip
+      - Plasma
+      - Percent
+      - Ripple Rainbow
+      - Heartbeat
+      - Pacifica
+      - Candle Multi
+      - Solid Glitter
+      - Sunrise
+      - Phased
+      - Twinkleup
+      - Noise Pal
+      - Sine
+      - Phased Noise
+      - Flow
+      - Chunchun
+      - Dancing Shadows
+      - Washing Machine
+      - Rotozoomer
+      - Blends
+      - TV Simulator
+      - Dynamic Smooth
+      - Spaceships
+      - Crazy Bees
+      - Ghost Rider
+      - Blobs
+      - Scrolling Text
+      - Drift Rose
+      - Distortion Waves
+      - Soap
+      - Octopus
+      - Waving Cell
+      - Pixels
+      - Pixelwave
+      - Juggles
+      - Matripix
+      - Gravimeter
+      - Plasmoid
+      - Puddles
+      - Midnoise
+      - Noisemeter
+      - Freqwave
+      - Freqmatrix
+      - GEQ
+      - Waterfall
+      - Freqpixels
+      - RSVD
+      - Noisefire
+      - Puddlepeak
+      - Noisemove
+      - Noise2D
+      - Perlin Move
+      - Ripple Peak
+      - Firenoise
+      - Squared Swirl
+      - RSVD
+      - DNA
+      - Matrix
+      - Metaballs
+      - Freqmap
+      - Gravcenter
+      - Gravcentric
+      - Gravfreq
+      - DJ Light
+      - Funky Plank
+      - RSVD
+      - Pulser
+      - Blurz
+      - Drift
+      - Waverly
+      - Sun Radiation
+      - Colored Bursts
+      - Julia
+      - RSVD
+      - RSVD
+      - RSVD
+      - Game Of Life
+      - Tartan
+      - Polar Lights
+      - Swirl
+      - Lissajous
+      - Frizzles
+      - Plasma Ball
+      - Flow Stripe
+      - Hiphotic
+      - Sindots
+      - DNA Spiral
+      - Black Hole
+      - Wavesins
+      - Rocktaves
+      - Akemi
+      supported_color_modes:
+      - rgbw
+      friendly_name: Segment 1
+      supported_features: 36
+      state: unavailable
+    light.wled_segment_2:
+      restored: true
+      effect_list:
+      - Solid
+      - Blink
+      - Breathe
+      - Wipe
+      - Wipe Random
+      - Random Colors
+      - Sweep
+      - Dynamic
+      - Colorloop
+      - Rainbow
+      - Scan
+      - Scan Dual
+      - Fade
+      - Theater
+      - Theater Rainbow
+      - Running
+      - Saw
+      - Twinkle
+      - Dissolve
+      - Dissolve Rnd
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Strobe
+      - Strobe Rainbow
+      - Strobe Mega
+      - Blink Rainbow
+      - Android
+      - Chase
+      - Chase Random
+      - Chase Rainbow
+      - Chase Flash
+      - Chase Flash Rnd
+      - Rainbow Runner
+      - Colorful
+      - Traffic Light
+      - Sweep Random
+      - Chase 2
+      - Aurora
+      - Stream
+      - Scanner
+      - Lighthouse
+      - Fireworks
+      - Rain
+      - Tetrix
+      - Fire Flicker
+      - Gradient
+      - Loading
+      - Rolling Balls
+      - Fairy
+      - Two Dots
+      - Fairytwinkle
+      - Running Dual
+      - RSVD
+      - Chase 3
+      - Tri Wipe
+      - Tri Fade
+      - Lightning
+      - ICU
+      - Multi Comet
+      - Scanner Dual
+      - Stream 2
+      - Oscillate
+      - Pride 2015
+      - Juggle
+      - Palette
+      - Fire 2012
+      - Colorwaves
+      - Bpm
+      - Fill Noise
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Colortwinkles
+      - Lake
+      - Meteor
+      - Meteor Smooth
+      - Railway
+      - Ripple
+      - Twinklefox
+      - Twinklecat
+      - Halloween Eyes
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Spots
+      - Spots Fade
+      - Glitter
+      - Candle
+      - Fireworks Starburst
+      - Fireworks 1D
+      - Bouncing Balls
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Popcorn
+      - Drip
+      - Plasma
+      - Percent
+      - Ripple Rainbow
+      - Heartbeat
+      - Pacifica
+      - Candle Multi
+      - Solid Glitter
+      - Sunrise
+      - Phased
+      - Twinkleup
+      - Noise Pal
+      - Sine
+      - Phased Noise
+      - Flow
+      - Chunchun
+      - Dancing Shadows
+      - Washing Machine
+      - Rotozoomer
+      - Blends
+      - TV Simulator
+      - Dynamic Smooth
+      - Spaceships
+      - Crazy Bees
+      - Ghost Rider
+      - Blobs
+      - Scrolling Text
+      - Drift Rose
+      - Distortion Waves
+      - Soap
+      - Octopus
+      - Waving Cell
+      - Pixels
+      - Pixelwave
+      - Juggles
+      - Matripix
+      - Gravimeter
+      - Plasmoid
+      - Puddles
+      - Midnoise
+      - Noisemeter
+      - Freqwave
+      - Freqmatrix
+      - GEQ
+      - Waterfall
+      - Freqpixels
+      - RSVD
+      - Noisefire
+      - Puddlepeak
+      - Noisemove
+      - Noise2D
+      - Perlin Move
+      - Ripple Peak
+      - Firenoise
+      - Squared Swirl
+      - RSVD
+      - DNA
+      - Matrix
+      - Metaballs
+      - Freqmap
+      - Gravcenter
+      - Gravcentric
+      - Gravfreq
+      - DJ Light
+      - Funky Plank
+      - RSVD
+      - Pulser
+      - Blurz
+      - Drift
+      - Waverly
+      - Sun Radiation
+      - Colored Bursts
+      - Julia
+      - RSVD
+      - RSVD
+      - RSVD
+      - Game Of Life
+      - Tartan
+      - Polar Lights
+      - Swirl
+      - Lissajous
+      - Frizzles
+      - Plasma Ball
+      - Flow Stripe
+      - Hiphotic
+      - Sindots
+      - DNA Spiral
+      - Black Hole
+      - Wavesins
+      - Rocktaves
+      - Akemi
+      supported_color_modes:
+      - rgbw
+      friendly_name: Segment 2
+      supported_features: 36
+      state: unavailable
+    light.wled_segment_3:
+      restored: true
+      effect_list:
+      - Solid
+      - Blink
+      - Breathe
+      - Wipe
+      - Wipe Random
+      - Random Colors
+      - Sweep
+      - Dynamic
+      - Colorloop
+      - Rainbow
+      - Scan
+      - Scan Dual
+      - Fade
+      - Theater
+      - Theater Rainbow
+      - Running
+      - Saw
+      - Twinkle
+      - Dissolve
+      - Dissolve Rnd
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Strobe
+      - Strobe Rainbow
+      - Strobe Mega
+      - Blink Rainbow
+      - Android
+      - Chase
+      - Chase Random
+      - Chase Rainbow
+      - Chase Flash
+      - Chase Flash Rnd
+      - Rainbow Runner
+      - Colorful
+      - Traffic Light
+      - Sweep Random
+      - Chase 2
+      - Aurora
+      - Stream
+      - Scanner
+      - Lighthouse
+      - Fireworks
+      - Rain
+      - Tetrix
+      - Fire Flicker
+      - Gradient
+      - Loading
+      - Rolling Balls
+      - Fairy
+      - Two Dots
+      - Fairytwinkle
+      - Running Dual
+      - RSVD
+      - Chase 3
+      - Tri Wipe
+      - Tri Fade
+      - Lightning
+      - ICU
+      - Multi Comet
+      - Scanner Dual
+      - Stream 2
+      - Oscillate
+      - Pride 2015
+      - Juggle
+      - Palette
+      - Fire 2012
+      - Colorwaves
+      - Bpm
+      - Fill Noise
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Colortwinkles
+      - Lake
+      - Meteor
+      - Meteor Smooth
+      - Railway
+      - Ripple
+      - Twinklefox
+      - Twinklecat
+      - Halloween Eyes
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Spots
+      - Spots Fade
+      - Glitter
+      - Candle
+      - Fireworks Starburst
+      - Fireworks 1D
+      - Bouncing Balls
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Popcorn
+      - Drip
+      - Plasma
+      - Percent
+      - Ripple Rainbow
+      - Heartbeat
+      - Pacifica
+      - Candle Multi
+      - Solid Glitter
+      - Sunrise
+      - Phased
+      - Twinkleup
+      - Noise Pal
+      - Sine
+      - Phased Noise
+      - Flow
+      - Chunchun
+      - Dancing Shadows
+      - Washing Machine
+      - Rotozoomer
+      - Blends
+      - TV Simulator
+      - Dynamic Smooth
+      - Spaceships
+      - Crazy Bees
+      - Ghost Rider
+      - Blobs
+      - Scrolling Text
+      - Drift Rose
+      - Distortion Waves
+      - Soap
+      - Octopus
+      - Waving Cell
+      - Pixels
+      - Pixelwave
+      - Juggles
+      - Matripix
+      - Gravimeter
+      - Plasmoid
+      - Puddles
+      - Midnoise
+      - Noisemeter
+      - Freqwave
+      - Freqmatrix
+      - GEQ
+      - Waterfall
+      - Freqpixels
+      - RSVD
+      - Noisefire
+      - Puddlepeak
+      - Noisemove
+      - Noise2D
+      - Perlin Move
+      - Ripple Peak
+      - Firenoise
+      - Squared Swirl
+      - RSVD
+      - DNA
+      - Matrix
+      - Metaballs
+      - Freqmap
+      - Gravcenter
+      - Gravcentric
+      - Gravfreq
+      - DJ Light
+      - Funky Plank
+      - RSVD
+      - Pulser
+      - Blurz
+      - Drift
+      - Waverly
+      - Sun Radiation
+      - Colored Bursts
+      - Julia
+      - RSVD
+      - RSVD
+      - RSVD
+      - Game Of Life
+      - Tartan
+      - Polar Lights
+      - Swirl
+      - Lissajous
+      - Frizzles
+      - Plasma Ball
+      - Flow Stripe
+      - Hiphotic
+      - Sindots
+      - DNA Spiral
+      - Black Hole
+      - Wavesins
+      - Rocktaves
+      - Akemi
+      supported_color_modes:
+      - rgbw
+      friendly_name: Segment 3
+      supported_features: 36
+      state: unavailable
+    light.wled:
+      effect_list:
+      - Solid
+      - Blink
+      - Breathe
+      - Wipe
+      - Wipe Random
+      - Random Colors
+      - Sweep
+      - Dynamic
+      - Colorloop
+      - Rainbow
+      - Scan
+      - Scan Dual
+      - Fade
+      - Theater
+      - Theater Rainbow
+      - Running
+      - Saw
+      - Twinkle
+      - Dissolve
+      - Dissolve Rnd
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Strobe
+      - Strobe Rainbow
+      - Strobe Mega
+      - Blink Rainbow
+      - Android
+      - Chase
+      - Chase Random
+      - Chase Rainbow
+      - Chase Flash
+      - Chase Flash Rnd
+      - Rainbow Runner
+      - Colorful
+      - Traffic Light
+      - Sweep Random
+      - Chase 2
+      - Aurora
+      - Stream
+      - Scanner
+      - Lighthouse
+      - Fireworks
+      - Rain
+      - Tetrix
+      - Fire Flicker
+      - Gradient
+      - Loading
+      - Rolling Balls
+      - Fairy
+      - Two Dots
+      - Fairytwinkle
+      - Running Dual
+      - RSVD
+      - Chase 3
+      - Tri Wipe
+      - Tri Fade
+      - Lightning
+      - ICU
+      - Multi Comet
+      - Scanner Dual
+      - Stream 2
+      - Oscillate
+      - Pride 2015
+      - Juggle
+      - Palette
+      - Fire 2012
+      - Colorwaves
+      - Bpm
+      - Fill Noise
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Colortwinkles
+      - Lake
+      - Meteor
+      - Meteor Smooth
+      - Railway
+      - Ripple
+      - Twinklefox
+      - Twinklecat
+      - Halloween Eyes
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Spots
+      - Spots Fade
+      - Glitter
+      - Candle
+      - Fireworks Starburst
+      - Fireworks 1D
+      - Bouncing Balls
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Popcorn
+      - Drip
+      - Plasma
+      - Percent
+      - Ripple Rainbow
+      - Heartbeat
+      - Pacifica
+      - Candle Multi
+      - Solid Glitter
+      - Sunrise
+      - Phased
+      - Twinkleup
+      - Noise Pal
+      - Sine
+      - Phased Noise
+      - Flow
+      - Chunchun
+      - Dancing Shadows
+      - Washing Machine
+      - Rotozoomer
+      - Blends
+      - TV Simulator
+      - Dynamic Smooth
+      - Spaceships
+      - Crazy Bees
+      - Ghost Rider
+      - Blobs
+      - Scrolling Text
+      - Drift Rose
+      - Distortion Waves
+      - Soap
+      - Octopus
+      - Waving Cell
+      - Pixels
+      - Pixelwave
+      - Juggles
+      - Matripix
+      - Gravimeter
+      - Plasmoid
+      - Puddles
+      - Midnoise
+      - Noisemeter
+      - Freqwave
+      - Freqmatrix
+      - GEQ
+      - Waterfall
+      - Freqpixels
+      - RSVD
+      - Noisefire
+      - Puddlepeak
+      - Noisemove
+      - Noise2D
+      - Perlin Move
+      - Ripple Peak
+      - Firenoise
+      - Squared Swirl
+      - RSVD
+      - DNA
+      - Matrix
+      - Metaballs
+      - Freqmap
+      - Gravcenter
+      - Gravcentric
+      - Gravfreq
+      - DJ Light
+      - Funky Plank
+      - RSVD
+      - Pulser
+      - Blurz
+      - Drift
+      - Waverly
+      - Sun Radiation
+      - Colored Bursts
+      - Julia
+      - RSVD
+      - RSVD
+      - RSVD
+      - Game Of Life
+      - Tartan
+      - Polar Lights
+      - Swirl
+      - Lissajous
+      - Frizzles
+      - Plasma Ball
+      - Flow Stripe
+      - Hiphotic
+      - Sindots
+      - DNA Spiral
+      - Black Hole
+      - Wavesins
+      - Rocktaves
+      - Akemi
+      supported_color_modes:
+      - rgb
+      effect: Solid
+      color_mode: rgb
+      brightness: 255
+      hs_color:
+      - 31.892
+      - 87.059
+      rgb_color:
+      - 255
+      - 151
+      - 33
+      xy_color:
+      - 0.575
+      - 0.395
+      friendly_name: WLED
+      supported_features: 36
+      state: 'on'
+    light.office_lamp:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2202
+      color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
+      friendly_name: Office Lamp
+      supported_features: 44
+      state: 'on'
+    select.office_lamp_effect:
+      options:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      assumed_state: true
+      icon: mdi:palette
+      friendly_name: Office Lamp Effect
+      state: unknown
+  icon: mdi:heat-wave
+  metadata: {}

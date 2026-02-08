@@ -1,0 +1,1590 @@
+- id: '1706769658361'
+  alias: Press 2 to increase arc lamp brightness
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6d1900d881cb397b2b542c2539520940
+    type: action
+    subtype: 2_single
+    discovery_id: 0x187a3efffefabf23 action_2_single
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: 80deb36479846ecf9961f72e163c3030
+    domain: light
+    entity_id: 9eff2bfc0e5556c8ca942fce32434d0f
+    type: brightness_increase
+  - device_id: d73fc3eacb6441893be6cbf3b19af442
+    domain: light
+    entity_id: 6807fb8e78d080b97fabfb4d896652ce
+    type: brightness_increase
+  mode: single
+- id: '1706769743083'
+  alias: 'Press 4 to decrease arc lamp brightness '
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6d1900d881cb397b2b542c2539520940
+    type: action
+    subtype: 4_single
+    discovery_id: 0x187a3efffefabf23 action_4_single
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: d73fc3eacb6441893be6cbf3b19af442
+    domain: light
+    entity_id: 6807fb8e78d080b97fabfb4d896652ce
+    type: brightness_decrease
+  - device_id: 80deb36479846ecf9961f72e163c3030
+    domain: light
+    entity_id: 9eff2bfc0e5556c8ca942fce32434d0f
+    type: brightness_decrease
+  mode: single
+- id: '1742451914096'
+  alias: Double press 2 to default arc light
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6d1900d881cb397b2b542c2539520940
+    type: action
+    subtype: 2_double
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_on
+    device_id: d73fc3eacb6441893be6cbf3b19af442
+    entity_id: 6807fb8e78d080b97fabfb4d896652ce
+    domain: light
+    brightness_pct: 70
+    flash: long
+  mode: single
+- id: '1742451965324'
+  alias: Double press 4 to turn off beam light
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6d1900d881cb397b2b542c2539520940
+    type: action
+    subtype: 4_double
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: d73fc3eacb6441893be6cbf3b19af442
+    entity_id: 6807fb8e78d080b97fabfb4d896652ce
+    domain: light
+  mode: single
+- id: '1742452160102'
+  alias: Press 1 to inc floor lamp brightness
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6d1900d881cb397b2b542c2539520940
+    type: action
+    subtype: 1_single
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: f154a2eaee1734c9afe43220965b8e11
+    domain: light
+    entity_id: c274f39319c1655ddece9c421df00bc7
+    type: brightness_increase
+  mode: single
+- id: '1742452238916'
+  alias: Press 3 to dec floor lamp brightness
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6d1900d881cb397b2b542c2539520940
+    type: action
+    subtype: 3_single
+    trigger: device
+  conditions: []
+  actions:
+  - device_id: f154a2eaee1734c9afe43220965b8e11
+    domain: light
+    entity_id: c274f39319c1655ddece9c421df00bc7
+    type: brightness_decrease
+  mode: single
+- id: '1742452294481'
+  alias: Double press 1 to default floor lamp
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6d1900d881cb397b2b542c2539520940
+    type: action
+    subtype: 1_double
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_on
+    device_id: 96325d4bfd523f9d2b1f3fe9d61b8650
+    entity_id: e5f4150002d2c874749a6f31697a83fe
+    domain: light
+    brightness_pct: 100
+  - type: turn_on
+    device_id: f154a2eaee1734c9afe43220965b8e11
+    entity_id: c274f39319c1655ddece9c421df00bc7
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1742452345459'
+  alias: Double press 3 to turn off floor lamp
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6d1900d881cb397b2b542c2539520940
+    type: action
+    subtype: 3_double
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: 96325d4bfd523f9d2b1f3fe9d61b8650
+    entity_id: e5f4150002d2c874749a6f31697a83fe
+    domain: light
+  - type: turn_off
+    device_id: f154a2eaee1734c9afe43220965b8e11
+    entity_id: c274f39319c1655ddece9c421df00bc7
+    domain: light
+  mode: single
+- id: '1742452422439'
+  alias: Hold 1 to turn on all lights max
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6d1900d881cb397b2b542c2539520940
+    type: action
+    subtype: 1_hold
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_on
+    device_id: d73fc3eacb6441893be6cbf3b19af442
+    entity_id: 6807fb8e78d080b97fabfb4d896652ce
+    domain: light
+    brightness_pct: 100
+  - type: turn_on
+    device_id: f154a2eaee1734c9afe43220965b8e11
+    entity_id: c274f39319c1655ddece9c421df00bc7
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1742452563732'
+  alias: Hold 3 to turn all lights off
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 6d1900d881cb397b2b542c2539520940
+    type: action
+    subtype: 3_hold
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: d73fc3eacb6441893be6cbf3b19af442
+    entity_id: 6807fb8e78d080b97fabfb4d896652ce
+    domain: light
+  - type: turn_off
+    device_id: f154a2eaee1734c9afe43220965b8e11
+    entity_id: c274f39319c1655ddece9c421df00bc7
+    domain: light
+  mode: single
+- id: '1742673506378'
+  alias: Turn on bathroom lights
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    type: action
+    subtype: 'on'
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: time
+        after: '20:30:00'
+        before: 06:00:00
+      sequence:
+      - target:
+          entity_id: input_select.bathroom_light_colors
+        action: input_select.select_first
+        data: {}
+      - target:
+          entity_id: light.wcl1
+        data:
+          brightness_pct: 1
+          color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'') |
+            int }}'
+        action: light.turn_on
+      - choose:
+        - conditions:
+          - alias: if zero lights are on, increment the light counter
+            condition: numeric_state
+            entity_id: counter.number_of_bulbs_on
+            below: 1
+          sequence:
+          - target:
+              entity_id: counter.number_of_bulbs_on
+            action: counter.increment
+            data: {}
+    - conditions:
+      - condition: time
+        before: '20:30:00'
+        after: 06:00:00
+      sequence:
+      - target:
+          entity_id: counter.number_of_bulbs_on
+        action: counter.set_value
+        data:
+          value: 8
+      - target:
+          entity_id: input_select.bathroom_light_colors
+        data:
+          option: '{{ state_attr(''input_select.bathroom_light_colors'', ''options'')[1]
+            }}'
+        action: input_select.select_option
+      - target:
+          entity_id: light.wcl
+        data:
+          brightness_pct: 1
+          color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'') |
+            int }}'
+        action: light.turn_on
+    default: []
+  mode: single
+- id: '1742701939447'
+  alias: bathroom b up
+  description: This automation starts the "Brightness Up" loop
+  triggers:
+  - domain: mqtt
+    device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    type: action
+    subtype: brightness_move_up
+    discovery_id: 0x881a14fffe207503 action_brightness_move_up
+    id: brightness_up
+    trigger: device
+  conditions:
+  - condition: state
+    entity_id: input_boolean.test_bathroom_lights
+    state: 'off'
+  actions:
+  - target:
+      entity_id: input_boolean.test_bathroom_lights
+    action: input_boolean.turn_on
+  - repeat:
+      while:
+      - condition: state
+        entity_id: input_boolean.test_bathroom_lights
+        state: 'on'
+      sequence:
+      - choose:
+        - conditions:
+          - alias: number of bulbs on is 8
+            condition: numeric_state
+            entity_id: counter.number_of_bulbs_on
+            above: 7
+          sequence:
+          - data:
+              brightness_step_pct: 5
+            target:
+              entity_id: light.wcl
+            action: light.turn_on
+          - delay:
+              milliseconds: 250
+        default:
+        - target:
+            entity_id: counter.number_of_bulbs_on
+          action: counter.increment
+        - data:
+            brightness: 1
+          target:
+            entity_id: light.wcl{{ states('counter.number_of_bulbs_on') }}
+          action: light.turn_on
+        - delay:
+            milliseconds: 500
+  - target:
+      entity_id: input_boolean.test_bathroom_lights
+    action: input_boolean.turn_off
+  mode: single
+- id: '1742702639744'
+  alias: bathroom b down
+  description: This automation starts the "Brightness Down" loop
+  triggers:
+  - domain: mqtt
+    device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    type: action
+    subtype: brightness_move_down
+    discovery_id: 0x881a14fffe207503 action_brightness_move_down
+    id: brightness_down
+    trigger: device
+  conditions:
+  - condition: state
+    entity_id: input_boolean.test_bathroom_lights
+    state: 'off'
+  actions:
+  - target:
+      entity_id: input_boolean.test_bathroom_lights
+    action: input_boolean.turn_on
+    data: {}
+  - repeat:
+      while:
+      - condition: state
+        entity_id: input_boolean.test_bathroom_lights
+        state: 'on'
+      sequence:
+      - choose:
+        - conditions:
+          - alias: Number of bathroom lights on is 8
+            condition: numeric_state
+            entity_id: counter.number_of_bulbs_on
+            above: 7
+          sequence:
+          - data:
+              entity_id: light.wcl
+              brightness: '{% set current_brightness = state_attr(''light.wcl'', ''brightness'')
+                | default(255) %} {% set step = 10 %} {% set new_brightness = current_brightness
+                - step %} {% if new_brightness < 5 %}5{% else %}{{ new_brightness
+                }}{% endif %}'
+            action: light.turn_on
+      - choose:
+        - conditions:
+          - alias: bulbs are at minimum brightness
+            condition: numeric_state
+            entity_id: light.wcl1
+            attribute: brightness
+            below: 11
+          sequence:
+          - target:
+              entity_id: light.wcl{{ states('counter.number_of_bulbs_on') }}
+            action: light.turn_off
+          - target:
+              entity_id: counter.number_of_bulbs_on
+            action: counter.decrement
+          - delay:
+              milliseconds: 500
+  - target:
+      entity_id: input_boolean.test_ikea_bureau
+    action: input_boolean.turn_off
+    data: {}
+  mode: single
+- id: '1742702697378'
+  alias: bathroom b stop
+  description: This automation stops any "Brightness" loop
+  triggers:
+  - domain: mqtt
+    device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    type: action
+    subtype: brightness_stop
+    discovery_id: 0x881a14fffe207503 action_brightness_stop
+    trigger: device
+  conditions: []
+  actions:
+  - data: {}
+    target:
+      entity_id: input_boolean.test_bathroom_lights
+    action: input_boolean.turn_off
+  mode: single
+- id: '1742703874606'
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    type: action
+    subtype: arrow_right_click
+    trigger: device
+  conditions: []
+  actions:
+  - action: input_select.select_next
+    data:
+      cycle: false
+    target:
+      entity_id: input_select.bathroom_light_colors
+  - data:
+      entity_id: light.wcl
+      color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'') | int
+        }}'
+    action: light.turn_on
+  mode: single
+- id: '1742704400491'
+  alias: Bathroom c down
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    type: action
+    subtype: arrow_left_click
+    trigger: device
+  conditions: []
+  actions:
+  - action: input_select.select_previous
+    target:
+      entity_id:
+      - input_select.bathroom_light_colors
+    data:
+      cycle: false
+  - data:
+      entity_id: light.wcl
+      color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'') | int
+        }}'
+    action: light.turn_on
+  mode: single
+- id: '1742705733933'
+  alias: Turn Off Bathroom Lights and Notify
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    type: action
+    subtype: 'off'
+    trigger: device
+  conditions: []
+  actions:
+  - target:
+      entity_id: light.wcl
+    action: light.turn_off
+  - target:
+      entity_id: counter.number_of_bulbs_on
+    action: counter.reset
+  mode: single
+- id: '1751256609056'
+  alias: SilverLamp - Flash Bulb Red
+  description: ''
+  triggers:
+  - trigger: webhook
+    allowed_methods:
+    - POST
+    - PUT
+    local_only: false
+    webhook_id: -Xrx5BpvE5dZ48rGneLBkjdRC
+  conditions:
+  - condition: device
+    type: is_on
+    device_id: 5b34a6a7d967f14718fedc6b25db0620
+    entity_id: ce0dd2d8168154c3844c48736e020c1e
+    domain: light
+  actions:
+  - action: scene.create
+    metadata: {}
+    data:
+      scene_id: silverlamp_topbulb_state
+      snapshot_entities:
+      - light.silver_top
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      brightness_pct: 100
+      transition: 1
+    target:
+      device_id: 5b34a6a7d967f14718fedc6b25db0620
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    data:
+      transition: 3
+    target:
+      entity_id: scene.silverlamp_topbulb_state
+  - action: scene.create
+    metadata: {}
+    data:
+      scene_id: silverlamp_middlebulb_state
+      snapshot_entities:
+      - light.silver_middle
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      brightness_pct: 100
+      transition: 1
+    target:
+      device_id: 573a5fd984b35899ed1741b64dd8932c
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    data:
+      transition: 3
+    target:
+      entity_id: scene.silverlamp_middlebulb_state
+  - action: scene.create
+    metadata: {}
+    data:
+      scene_id: silverlamp_bottombulb_state
+      snapshot_entities:
+      - light.silver_bottom
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      brightness_pct: 100
+      transition: 1
+    target:
+      device_id: f04c6ea12674cbe00427a4d645f38151
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    data:
+      transition: 3
+    target:
+      entity_id: scene.silverlamp_bottombulb_state
+  mode: single
+- id: '1751262766980'
+  alias: Office Lamp Red
+  description: ''
+  triggers:
+  - trigger: webhook
+    allowed_methods:
+    - POST
+    - PUT
+    local_only: true
+    webhook_id: -1Wye0oQI_ADbOJ6Oa8GbWpsA
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      brightness_pct: 100
+    target:
+      device_id: e0ec623407c44c68191b5cae923ba7fd
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      brightness_pct: 100
+    target:
+      device_id: 8420f08e6794fc809595df56590eb619
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - action: light.turn_on
+    metadata: {}
+    data:
+      color_temp_kelvin: 2490
+      brightness_pct: 30
+    target:
+      device_id: e0ec623407c44c68191b5cae923ba7fd
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_pct: 100
+      color_temp_kelvin: 3498
+    target:
+      device_id: 8420f08e6794fc809595df56590eb619
+  mode: restart
+- id: '1762230674414'
+  alias: Consolidated Office Styrbar
+  description: Uses Styrbar actions to control Zigbee and WLED lights
+  triggers:
+  - device_id: 2d58a7b87afb81805c2e598c2652312e
+    domain: mqtt
+    type: action
+    subtype: 'on'
+    id: styrbar_on
+    trigger: device
+  - device_id: 2d58a7b87afb81805c2e598c2652312e
+    domain: mqtt
+    type: action
+    subtype: 'off'
+    id: styrbar_off
+    trigger: device
+  - device_id: 2d58a7b87afb81805c2e598c2652312e
+    domain: mqtt
+    type: action
+    subtype: brightness_move_up
+    id: styrbar_dim_start
+    trigger: device
+  - device_id: 2d58a7b87afb81805c2e598c2652312e
+    domain: mqtt
+    type: action
+    subtype: brightness_move_down
+    id: styrbar_dim_start
+    trigger: device
+  - device_id: 2d58a7b87afb81805c2e598c2652312e
+    domain: mqtt
+    type: action
+    subtype: brightness_stop
+    id: styrbar_dim_stop
+    trigger: device
+  - device_id: 2d58a7b87afb81805c2e598c2652312e
+    domain: mqtt
+    type: action
+    subtype: arrow_left_click
+    id: styrbar_prev_color
+    trigger: device
+  - device_id: 2d58a7b87afb81805c2e598c2652312e
+    domain: mqtt
+    type: action
+    subtype: arrow_right_click
+    id: styrbar_next_color
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: styrbar_on
+      sequence:
+      - target:
+          entity_id: light.styrbar_controlled_lights
+        data:
+          brightness: 254
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: styrbar_off
+      sequence:
+      - target:
+          entity_id: light.styrbar_controlled_lights
+        action: light.turn_off
+    - conditions:
+      - condition: trigger
+        id: styrbar_dim_start
+      sequence:
+      - target:
+          entity_id: light.styrbar_controlled_lights
+        data:
+          brightness_step_pct: '{{ 5 if ''up'' in trigger.payload else -5 }}'
+        action: light.turn_on
+      - repeat:
+          until:
+          - condition: template
+            value_template: 'false'
+          sequence:
+          - delay:
+              milliseconds: 300
+          - target:
+              entity_id: light.styrbar_controlled_lights
+            data:
+              brightness_step_pct: '{{ 10 if ''up'' in trigger.payload else -5 }}'
+            action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: styrbar_dim_stop
+      sequence: []
+    - conditions:
+      - condition: trigger
+        id: styrbar_next_color
+      sequence:
+      - variables:
+          current_index: '{{ states(''input_number.styrbar_color_index'') | int(0)
+            }}'
+          playlist_len: '{{ color_playlist | length }}'
+          new_index: '{{ (current_index + 1) % playlist_len }}'
+      - target:
+          entity_id: input_number.styrbar_color_index
+        data:
+          value: '{{ new_index }}'
+        action: input_number.set_value
+      - target:
+          entity_id: light.styrbar_controlled_lights
+        data:
+          rgb_color: '{{ color_playlist[new_index].rgb_color }}'
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: styrbar_prev_color
+      sequence:
+      - variables:
+          current_index: '{{ states(''input_number.styrbar_color_index'') | int(0)
+            }}'
+          playlist_len: '{{ color_playlist | length }}'
+          new_index: '{{ (current_index - 1) % playlist_len }}'
+      - target:
+          entity_id: input_number.styrbar_color_index
+        data:
+          value: '{{ new_index }}'
+        action: input_number.set_value
+      - target:
+          entity_id: light.styrbar_controlled_lights
+        data:
+          rgb_color: '{{ color_playlist[new_index].rgb_color }}'
+        action: light.turn_on
+  mode: restart
+  variables:
+    color_playlist:
+    - rgb_color:
+      - 255
+      - 179
+      - 111
+    - rgb_color:
+      - 255
+      - 196
+      - 142
+    - rgb_color:
+      - 255
+      - 214
+      - 173
+    - rgb_color:
+      - 255
+      - 255
+      - 255
+    - rgb_color:
+      - 201
+      - 226
+      - 255
+    - rgb_color:
+      - 255
+      - 0
+      - 0
+    - rgb_color:
+      - 255
+      - 165
+      - 0
+    - rgb_color:
+      - 255
+      - 255
+      - 0
+    - rgb_color:
+      - 0
+      - 255
+      - 0
+    - rgb_color:
+      - 0
+      - 255
+      - 255
+    - rgb_color:
+      - 0
+      - 0
+      - 255
+    - rgb_color:
+      - 128
+      - 0
+      - 128
+    - rgb_color:
+      - 255
+      - 0
+      - 255
+    - rgb_color:
+      - 255
+      - 105
+      - 180
+    - rgb_color:
+      - 0
+      - 128
+      - 128
+    - rgb_color:
+      - 75
+      - 0
+      - 130
+- id: '1762232684858'
+  alias: Consolidated Living Room 4-Button Controller
+  description: Handles all actions for the 2x2 grid controller
+  triggers:
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 1_single
+    id: 1_single
+    trigger: device
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 1_double
+    id: 1_double
+    trigger: device
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 1_hold
+    id: 1_hold
+    trigger: device
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 2_single
+    id: 2_single
+    trigger: device
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 2_double
+    id: 2_double
+    trigger: device
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 3_single
+    id: 3_single
+    trigger: device
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 3_double
+    id: 3_double
+    trigger: device
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 3_hold
+    id: 3_hold
+    trigger: device
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 4_single
+    id: 4_single
+    trigger: device
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 4_double
+    id: 4_double
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: 1_single
+      sequence:
+      - device_id: f154a2eaee1734c9afe43220965b8e11
+        domain: light
+        entity_id: c274f39319c1655ddece9c421df00bc7
+        type: brightness_increase
+    - conditions:
+      - condition: trigger
+        id: 1_double
+      sequence:
+      - target:
+          entity_id:
+          - e5f4150002d2c874749a6f31697a83fe
+          - c274f39319c1655ddece9c421df00bc7
+        data:
+          brightness_pct: 100
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 1_hold
+      sequence:
+      - target:
+          entity_id:
+          - 6807fb8e78d080b97fabfb4d896652ce
+          - c274f39319c1655ddece9c421df00bc7
+        data:
+          brightness_pct: 100
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 2_single
+      sequence:
+      - device_id: 80deb36479846ecf9961f72e163c3030
+        domain: light
+        entity_id: 9eff2bfc0e5556c8ca942fce32434d0f
+        type: brightness_increase
+      - device_id: d73fc3eacb6441893be6cbf3b19af442
+        domain: light
+        entity_id: 6807fb8e78d080b97fabfb4d896652ce
+        type: brightness_increase
+    - conditions:
+      - condition: trigger
+        id: 2_double
+      sequence:
+      - target:
+          entity_id: 6807fb8e78d080b97fabfb4d896652ce
+        data:
+          brightness_pct: 70
+          flash: long
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 3_single
+      sequence:
+      - device_id: f154a2eaee1734c9afe43220965b8e11
+        domain: light
+        entity_id: c274f39319c1655ddece9c421df00bc7
+        type: brightness_decrease
+    - conditions:
+      - condition: trigger
+        id: 3_double
+      sequence:
+      - target:
+          entity_id:
+          - e5f4150002d2c874749a6f31697a83fe
+          - c274f39319c1655ddece9c421df00bc7
+        action: light.turn_off
+    - conditions:
+      - condition: trigger
+        id: 3_hold
+      sequence:
+      - target:
+          entity_id:
+          - 6807fb8e78d080b97fabfb4d896652ce
+          - c274f39319c1655ddece9c421df00bc7
+        action: light.turn_off
+    - conditions:
+      - condition: trigger
+        id: 4_single
+      sequence:
+      - device_id: d73fc3eacb6441893be6cbf3b19af442
+        domain: light
+        entity_id: 6807fb8e78d080b97fabfb4d896652ce
+        type: brightness_decrease
+      - device_id: 80deb36479846ecf9961f72e163c3030
+        domain: light
+        entity_id: 9eff2bfc0e5556c8ca942fce32434d0f
+        type: brightness_decrease
+    - conditions:
+      - condition: trigger
+        id: 4_double
+      sequence:
+      - action: light.turn_off
+  mode: queued
+- id: '1762233126240'
+  alias: Consolidated Bathroom Styrbar
+  description: Handles all actions for the Bathroom Styrbar controller
+  triggers:
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: 'on'
+    id: 'on'
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: 'off'
+    id: 'off'
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: brightness_move_up
+    id: brightness_move_up
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: brightness_move_down
+    id: brightness_move_down
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: brightness_stop
+    id: brightness_stop
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: arrow_left_click
+    id: arrow_left_click
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: arrow_right_click
+    id: arrow_right_click
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: 'on'
+      sequence:
+      - choose:
+        - conditions:
+          - condition: time
+            after: '20:30:00'
+            before: 06:00:00
+          sequence:
+          - target:
+              entity_id: input_select.bathroom_light_colors
+            action: input_select.select_first
+          - target:
+              entity_id: light.wcl1
+            data:
+              brightness_pct: 1
+              color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'')
+                | int }}'
+            action: light.turn_on
+          - if:
+            - condition: numeric_state
+              entity_id: counter.number_of_bulbs_on
+              below: 1
+            then:
+            - target:
+                entity_id: counter.number_of_bulbs_on
+              action: counter.increment
+        - conditions:
+          - condition: time
+            after: 06:00:00
+            before: '20:30:00'
+          sequence:
+          - target:
+              entity_id: counter.number_of_bulbs_on
+            data:
+              value: 8
+            action: counter.set_value
+          - target:
+              entity_id: input_select.bathroom_light_colors
+            data:
+              option: '{{ state_attr(''input_select.bathroom_light_colors'', ''options'')[1]
+                }}'
+            action: input_select.select_option
+          - target:
+              entity_id: light.wcl
+            data:
+              brightness_pct: 1
+              color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'')
+                | int }}'
+            action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 'off'
+      sequence:
+      - target:
+          entity_id: light.wcl
+        action: light.turn_off
+      - target:
+          entity_id: counter.number_of_bulbs_on
+        action: counter.reset
+    - conditions:
+      - condition: trigger
+        id: brightness_move_up
+      sequence:
+      - repeat:
+          until:
+          - condition: template
+            value_template: 'false'
+          sequence:
+          - choose:
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.number_of_bulbs_on
+                above: 7
+              sequence:
+              - target:
+                  entity_id: light.wcl
+                data:
+                  brightness_step_pct: 5
+                action: light.turn_on
+              - delay:
+                  milliseconds: 250
+            default:
+            - target:
+                entity_id: counter.number_of_bulbs_on
+              action: counter.increment
+            - target:
+                entity_id: light.wcl{{ states('counter.number_of_bulbs_on') }}
+              data:
+                brightness: 1
+              action: light.turn_on
+            - delay:
+                milliseconds: 500
+    - conditions:
+      - condition: trigger
+        id: brightness_move_down
+      sequence:
+      - repeat:
+          until:
+          - condition: template
+            value_template: 'false'
+          sequence:
+          - choose:
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.number_of_bulbs_on
+                above: 7
+              sequence:
+              - target:
+                  entity_id: light.wcl
+                data:
+                  brightness: '{% set current = state_attr(''light.wcl'', ''brightness'')
+                    | default(255) | int %} {% set new = current - 10 %} {{ 5 if new
+                    < 5 else new }}'
+                action: light.turn_on
+              - delay:
+                  milliseconds: 250
+          - choose:
+            - conditions:
+              - condition: numeric_state
+                entity_id: light.wcl1
+                attribute: brightness
+                below: 11
+              - condition: numeric_state
+                entity_id: counter.number_of_bulbs_on
+                above: 0
+              sequence:
+              - target:
+                  entity_id: light.wcl{{ states('counter.number_of_bulbs_on') }}
+                action: light.turn_off
+              - target:
+                  entity_id: counter.number_of_bulbs_on
+                action: counter.decrement
+              - delay:
+                  milliseconds: 500
+    - conditions:
+      - condition: trigger
+        id: brightness_stop
+      sequence: []
+    - conditions:
+      - condition: trigger
+        id: arrow_left_click
+      sequence:
+      - target:
+          entity_id: input_select.bathroom_light_colors
+        data:
+          cycle: false
+        action: input_select.select_previous
+      - target:
+          entity_id: light.wcl
+        data:
+          color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'') |
+            int }}'
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: arrow_right_click
+      sequence:
+      - target:
+          entity_id: input_select.bathroom_light_colors
+        data:
+          cycle: false
+        action: input_select.select_next
+      - target:
+          entity_id: light.wcl
+        data:
+          color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'') |
+            int }}'
+        action: light.turn_on
+  mode: restart
+- id: '1762233494350'
+  alias: Consolidated Bathroom Styrbar experimental
+  description: Handles all actions for the Bathroom Styrbar controller
+  triggers:
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: 'on'
+    id: 'on'
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: 'off'
+    id: 'off'
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: brightness_move_up
+    id: brightness_move_up
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: brightness_move_down
+    id: brightness_move_down
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: brightness_stop
+    id: brightness_stop
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: arrow_left_click
+    id: arrow_left_click
+    trigger: device
+  - device_id: 5ffdd39dfae45ca2bdecb8566cead5e4
+    domain: mqtt
+    type: action
+    subtype: arrow_right_click
+    id: arrow_right_click
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: 'on'
+      sequence:
+      - choose:
+        - conditions:
+          - condition: time
+            after: '20:30:00'
+            before: 06:00:00
+          sequence:
+          - target:
+              entity_id: input_select.bathroom_light_colors
+            action: input_select.select_first
+          - target:
+              entity_id: light.wcl1
+            data:
+              brightness_pct: 1
+              color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'')
+                | int }}'
+            action: light.turn_on
+          - if:
+            - condition: numeric_state
+              entity_id: counter.number_of_bulbs_on
+              below: 1
+            then:
+            - target:
+                entity_id: counter.number_of_bulbs_on
+              action: counter.increment
+        - conditions:
+          - condition: time
+            after: 06:00:00
+            before: '20:30:00'
+          sequence:
+          - target:
+              entity_id: counter.number_of_bulbs_on
+            data:
+              value: 8
+            action: counter.set_value
+          - target:
+              entity_id: input_select.bathroom_light_colors
+            data:
+              option: '{{ state_attr(''input_select.bathroom_light_colors'', ''options'')[1]
+                }}'
+            action: input_select.select_option
+          - target:
+              entity_id: light.wcl
+            data:
+              brightness_pct: 1
+              color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'')
+                | int }}'
+            action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 'off'
+      sequence:
+      - target:
+          entity_id: light.wcl
+        action: light.turn_off
+      - target:
+          entity_id: counter.number_of_bulbs_on
+        action: counter.reset
+    - conditions:
+      - condition: trigger
+        id: brightness_move_up
+      sequence:
+      - repeat:
+          until:
+          - condition: template
+            value_template: 'false'
+          sequence:
+          - choose:
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.number_of_bulbs_on
+                above: 7
+              sequence:
+              - target:
+                  entity_id: light.wcl
+                data:
+                  brightness_step_pct: 5
+                action: light.turn_on
+              - delay:
+                  milliseconds: 250
+            default:
+            - target:
+                entity_id: counter.number_of_bulbs_on
+              action: counter.increment
+            - target:
+                entity_id: light.wcl{{ states('counter.number_of_bulbs_on') }}
+              data:
+                brightness: 1
+              action: light.turn_on
+            - delay:
+                milliseconds: 500
+    - conditions:
+      - condition: trigger
+        id: brightness_move_down
+      sequence:
+      - repeat:
+          until:
+          - condition: template
+            value_template: 'false'
+          sequence:
+          - choose:
+            - conditions:
+              - condition: numeric_state
+                entity_id: counter.number_of_bulbs_on
+                above: 7
+              sequence:
+              - target:
+                  entity_id: light.wcl
+                data:
+                  brightness: '{% set current = state_attr(''light.wcl'', ''brightness'')
+                    | default(255) | int %} {% set new = current - 10 %} {{ 5 if new
+                    < 5 else new }}'
+                action: light.turn_on
+              - delay:
+                  milliseconds: 250
+          - choose:
+            - conditions:
+              - condition: numeric_state
+                entity_id: light.wcl1
+                attribute: brightness
+                below: 11
+              - condition: numeric_state
+                entity_id: counter.number_of_bulbs_on
+                above: 0
+              sequence:
+              - target:
+                  entity_id: light.wcl{{ states('counter.number_of_bulbs_on') }}
+                action: light.turn_off
+              - target:
+                  entity_id: counter.number_of_bulbs_on
+                action: counter.decrement
+              - delay:
+                  milliseconds: 500
+    - conditions:
+      - condition: trigger
+        id: brightness_stop
+      sequence: []
+    - conditions:
+      - condition: trigger
+        id: arrow_left_click
+      sequence:
+      - target:
+          entity_id: input_select.bathroom_light_colors
+        data:
+          cycle: false
+        action: input_select.select_previous
+      - target:
+          entity_id: light.wcl
+        data:
+          color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'') |
+            int }}'
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: arrow_right_click
+      sequence:
+      - target:
+          entity_id: input_select.bathroom_light_colors
+        data:
+          cycle: false
+        action: input_select.select_next
+      - target:
+          entity_id: light.wcl
+        data:
+          color_temp_kelvin: '{{ states(''input_select.bathroom_light_colors'') |
+            int }}'
+        action: light.turn_on
+  mode: restart
+- id: '1764654567594'
+  alias: Silver lamp on, tree on
+  description: ''
+  triggers:
+  - type: turned_on
+    device_id: 573a5fd984b35899ed1741b64dd8932c
+    entity_id: 252d76cdb0bcf7b3c1bbe6b5f98cb7f3
+    domain: light
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_on
+    device_id: e518dc20d646371b19d54fbe247837a8
+    entity_id: 5f306b1c7d38c958b51af429cf6368dd
+    domain: switch
+  mode: single
+- id: '1764654601035'
+  alias: Silver off tree off
+  description: ''
+  triggers:
+  - type: turned_off
+    device_id: 573a5fd984b35899ed1741b64dd8932c
+    entity_id: 252d76cdb0bcf7b3c1bbe6b5f98cb7f3
+    domain: light
+    trigger: device
+  conditions: []
+  actions:
+  - type: turn_off
+    device_id: e518dc20d646371b19d54fbe247837a8
+    entity_id: 5f306b1c7d38c958b51af429cf6368dd
+    domain: switch
+  mode: single
+- id: '1764655211060'
+  alias: Experimental Consolidated Living Room 4-Button Controller
+  description: Handles all actions for the 2x2 grid controller (Silver Lamp & Beamlight)
+  triggers:
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 1_single
+    trigger: device
+    id: 1_single
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 1_double
+    trigger: device
+    id: 1_double
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 1_hold
+    trigger: device
+    id: 1_hold
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 2_single
+    trigger: device
+    id: 2_single
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 2_double
+    trigger: device
+    id: 2_double
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 3_single
+    trigger: device
+    id: 3_single
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 3_double
+    trigger: device
+    id: 3_double
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 3_hold
+    trigger: device
+    id: 3_hold
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 4_single
+    trigger: device
+    id: 4_single
+  - device_id: 6d1900d881cb397b2b542c2539520940
+    domain: mqtt
+    type: action
+    subtype: 4_double
+    trigger: device
+    id: 4_double
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: 1_single
+      sequence:
+      - target:
+          entity_id: c274f39319c1655ddece9c421df00bc7
+        data:
+          brightness_step_pct: 10
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 1_double
+      sequence:
+      - target:
+          entity_id: c274f39319c1655ddece9c421df00bc7
+        data:
+          brightness_pct: 100
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 1_hold
+      sequence:
+      - target:
+          entity_id:
+          - c274f39319c1655ddece9c421df00bc7
+          - 6807fb8e78d080b97fabfb4d896652ce
+        data:
+          brightness_pct: 100
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 2_single
+      sequence:
+      - target:
+          entity_id: 6807fb8e78d080b97fabfb4d896652ce
+        data:
+          brightness_step_pct: 10
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 2_double
+      sequence:
+      - target:
+          entity_id: 6807fb8e78d080b97fabfb4d896652ce
+        data:
+          brightness_pct: 100
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 3_single
+      sequence:
+      - target:
+          entity_id: c274f39319c1655ddece9c421df00bc7
+        data:
+          brightness_step_pct: -10
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 3_double
+      sequence:
+      - target:
+          entity_id: c274f39319c1655ddece9c421df00bc7
+        action: light.turn_off
+    - conditions:
+      - condition: trigger
+        id: 3_hold
+      sequence:
+      - target:
+          entity_id:
+          - c274f39319c1655ddece9c421df00bc7
+          - 6807fb8e78d080b97fabfb4d896652ce
+        action: light.turn_off
+    - conditions:
+      - condition: trigger
+        id: 4_single
+      sequence:
+      - target:
+          entity_id: 6807fb8e78d080b97fabfb4d896652ce
+        data:
+          brightness_step_pct: -10
+        action: light.turn_on
+    - conditions:
+      - condition: trigger
+        id: 4_double
+      sequence:
+      - target:
+          entity_id: 6807fb8e78d080b97fabfb4d896652ce
+        action: light.turn_off
+  mode: queued

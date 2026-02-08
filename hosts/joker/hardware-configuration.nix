@@ -11,28 +11,28 @@
 
 {
   imports = [
-    (modulesPath + "/profiles/qemu-guest.nix")
+    (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
   boot.initrd.availableKernelModules = [
-    "ata_piix"
-    "uhci_hcd"
-    "virtio_pci"
-    "virtio_scsi"
+    "xhci_pci"
+    "ahci"
+    "nvme"
+    "usbhid"
+    "usb_storage"
     "sd_mod"
-    "sr_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-label/NIXROOT";
+    device = "/dev/disk/by-uuid/d6a0fb3e-46f3-4768-8738-a33fd9d3abc5";
     fsType = "ext4";
   };
 
-  fileSystems."/mnt/nixboot" = {
-    device = "/dev/disk/by-label/NIXBOOT";
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/6C52-D6FE";
     fsType = "vfat";
     options = [
       "fmask=0022"
@@ -43,4 +43,5 @@
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
