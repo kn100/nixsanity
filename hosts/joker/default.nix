@@ -15,6 +15,7 @@
     ../../modules/services/mosquitto.nix
     ../../modules/services/zigbee2mqtt.nix
     ../../modules/services/jellyfin.nix
+    ../../modules/services/immich.nix
     ../../modules/services/tailscale-proxies.nix
     inputs.sops-nix.nixosModules.sops
   ];
@@ -77,6 +78,10 @@
       jellyfin = {
         hostname = "jellyfin";
         backendPort = 8096;
+      };
+      immich = {
+        hostname = "immich";
+        backendPort = 2283;
       };
     };
   };
