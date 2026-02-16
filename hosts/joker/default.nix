@@ -19,6 +19,7 @@
     ../../modules/services/immich-backup.nix
     ../../modules/services/tailscale-proxies.nix
     ../../modules/services/arr-stack.nix
+    ../../modules/services/monitoring.nix
     inputs.sops-nix.nixosModules.sops
   ];
 
@@ -108,6 +109,10 @@
       qbittorrent = {
         hostname = "qbittorrent";
         backendPort = 8081;
+      };
+      grafana = {
+        hostname = "grafana";
+        backendPort = 3000;
       };
     };
   };
