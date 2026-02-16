@@ -16,7 +16,9 @@
     ../../modules/services/zigbee2mqtt.nix
     ../../modules/services/jellyfin.nix
     ../../modules/services/immich.nix
+    ../../modules/services/immich-backup.nix
     ../../modules/services/tailscale-proxies.nix
+    ../../modules/services/arr-stack.nix
     inputs.sops-nix.nixosModules.sops
   ];
 
@@ -82,6 +84,30 @@
       immich = {
         hostname = "immich";
         backendPort = 2283;
+      };
+      jackett = {
+        hostname = "jackett";
+        backendPort = 9117;
+      };
+      sonarr = {
+        hostname = "sonarr";
+        backendPort = 8989;
+      };
+      radarr = {
+        hostname = "radarr";
+        backendPort = 7878;
+      };
+      prowlarr = {
+        hostname = "prowlarr";
+        backendPort = 9696;
+      };
+      homarr = {
+        hostname = "homarr";
+        backendPort = 7575;
+      };
+      qbittorrent = {
+        hostname = "qbittorrent";
+        backendPort = 8081;
       };
     };
   };

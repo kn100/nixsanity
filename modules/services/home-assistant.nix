@@ -20,8 +20,16 @@
       "androidtv_remote"
       "telegram_bot"
       "radio_browser"
+      "logbook"
+      "recorder"
+      "history"
+      "energy"
+      "usage_prediction"
+      "jellyfin"
     ];
     config = {
+      default_config = { };
+      logbook = { };
       http = {
         trusted_proxies = [
           "127.0.0.1"

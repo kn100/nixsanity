@@ -29,6 +29,8 @@
       BindReadOnlyPaths = [
         "/cow/burnable/qbittorrent/downloads/movies"
         "/cow/burnable/qbittorrent/downloads/tv"
+        "/cow/burnable/arr/media/movies"
+        "/cow/burnable/arr/media/tv"
       ];
     };
   };

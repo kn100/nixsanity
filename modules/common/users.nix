@@ -1,11 +1,9 @@
 { pkgs, ... }:
 
 {
-  # Groups
   users.groups.cowaccess.gid = 1000;
   users.groups.kn100.gid = 1001;
 
-  # Main user
   users.users.kn100 = {
     isNormalUser = true;
     description = "kn100";

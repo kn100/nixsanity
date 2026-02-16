@@ -9,6 +9,10 @@
 
   outputs =
     { self, nixpkgs, ... }@inputs:
+    let
+      systems = [ "x86_64-linux" ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+    in
     {
       nixosConfigurations = {
         joker = nixpkgs.lib.nixosSystem {
@@ -19,5 +23,30 @@
           ];
         };
       };
+
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        {
+          default = pkgs.mkShell {
+            buildInputs = with pkgs; [
+              git
+              nixos-rebuild
+              yj
+              age
+              sops
+              nixpkgs-fmt
+              nh
+              jq
+            ];
+
+            shellHook = ''
+              echo "--- Nixsanity Development Shell ---"
+            '';
+          };
+        }
+      );
     };
 }

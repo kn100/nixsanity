@@ -14,7 +14,7 @@
 
   time.timeZone = "Canada/Eastern";
 
-  services.xserver.xkb.layout = "us"; # Common environment settings
+  services.xserver.xkb.layout = "us";
 
   environment.systemPackages = with pkgs; [
     vim
