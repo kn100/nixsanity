@@ -1,9 +1,15 @@
 { config, pkgs, ... }:
 
 {
-  sops.secrets.restic_b2_account_id = { };
-  sops.secrets.restic_b2_account_key = { };
-  sops.secrets.restic_password = { };
+  sops.secrets.restic_b2_account_id = {
+    owner = "immich";
+  };
+  sops.secrets.restic_b2_account_key = {
+    owner = "immich";
+  };
+  sops.secrets.restic_password = {
+    owner = "immich";
+  };
 
   sops.templates.restic_b2_env = {
     owner = "immich";
@@ -13,11 +19,23 @@
     '';
   };
 
+  # Wrapper script for convenient manual restic operations
+  environment.systemPackages = [
+    (pkgs.writeShellScriptBin "restic-b2" ''
+      set -euo pipefail
+      if [ "$(id -u)" -ne 0 ]; then
+        echo "Error: restic-b2 must be run as root (use sudo)." >&2
+        exit 1
+      fi
+      export $(cat ${config.sops.templates.restic_b2_env.path} | xargs)
+      exec ${pkgs.restic}/bin/restic -p ${config.sops.secrets.restic_password.path} "$@"
+    '')
+  ];
+
   services.restic.backups = {
     immich-new-library = {
       user = "immich";
-      # NOTE: Replace 'immich-new-library-bucket' with your actual B2 bucket name
-      repository = "b2:immich-new-library-bucket";
+      repository = "b2:postnix-library";
       initialize = true;
       passwordFile = config.sops.secrets.restic_password.path;
       environmentFile = config.sops.templates.restic_b2_env.path;
@@ -31,18 +49,17 @@
         OnCalendar = "daily";
         Persistent = true;
       };
-      pruneOpts = {
-        keepDaily = 7;
-        keepWeekly = 4;
-        keepMonthly = 3;
-      };
+      pruneOpts = [
+        "--keep-daily=7"
+        "--keep-weekly=4"
+        "--keep-monthly=3"
+      ];
       extraBackupArgs = [ "--exclude-caches" ];
     };
 
     immich-old-library = {
       user = "immich";
-      # NOTE: Replace 'immich-old-library-bucket' with your actual B2 bucket name
-      repository = "b2:immich-old-library-bucket";
+      repository = "b2:prenix-library";
       initialize = true;
       passwordFile = config.sops.secrets.restic_password.path;
       environmentFile = config.sops.templates.restic_b2_env.path;
@@ -54,11 +71,11 @@
         OnCalendar = "daily";
         Persistent = true;
       };
-      pruneOpts = {
-        keepDaily = 7;
-        keepWeekly = 4;
-        keepMonthly = 3;
-      };
+      pruneOpts = [
+        "--keep-daily=7"
+        "--keep-weekly=4"
+        "--keep-monthly=3"
+      ];
       extraBackupArgs = [ "--exclude-caches" ];
     };
   };
