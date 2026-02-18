@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ../../modules/common/default.nix
     ../../modules/common/ssh.nix
+    ../../modules/common/mosh.nix
     ../../modules/common/users.nix
     ../../modules/services/home-assistant.nix
     ../../modules/services/mosquitto.nix
