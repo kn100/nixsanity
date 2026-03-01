@@ -12,6 +12,8 @@
     ../../modules/common/ssh.nix
     ../../modules/common/mosh.nix
     ../../modules/common/users.nix
+    ../../modules/common/tailscale.nix
+    ../../modules/common/networking.nix
     ../../modules/services/home-assistant.nix
     ../../modules/services/mosquitto.nix
     ../../modules/services/zigbee2mqtt.nix
@@ -21,6 +23,7 @@
     ../../modules/services/tailscale-proxies.nix
     ../../modules/services/arr-stack.nix
     ../../modules/services/monitoring.nix
+    ../../modules/services/iperf3.nix
     inputs.sops-nix.nixosModules.sops
   ];
 

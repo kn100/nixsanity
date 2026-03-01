@@ -6,6 +6,11 @@
     openFirewall = true;
   };
 
+  networking.firewall.allowedTCPPorts = [
+    8096
+    8920
+  ];
+
   systemd.services.jellyfin = {
     # This environment block ensures FFmpeg knows exactly which driver to use
     # and where to find the OpenCL/VPL runtimes for HDR tone mapping.
@@ -28,7 +33,6 @@
       ];
       BindReadOnlyPaths = [
         "/cow/burnable/qbittorrent/downloads/movies"
-        "/cow/burnable/qbittorrent/downloads/tv"
         "/cow/burnable/arr/media/movies"
         "/cow/burnable/arr/media/tv"
       ];
